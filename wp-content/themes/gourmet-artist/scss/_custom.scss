@@ -1,4 +1,18 @@
 /* Archivo SCSS */
-body {
-    background-color: #D9D9D9;
+
+header {
+    .header-image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 376px;
+
+        .site-branding {
+            padding-top: rem-calc( 120 ); /* rem-calc(): función de 'Foundation' que converte pixeles a rem */
+
+            a,
+            p {
+                color: $white;
+            }
+        }
+    }
 }
