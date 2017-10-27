@@ -118,9 +118,34 @@ add_action( 'widgets_init', 'gourmet_artist_widgets_init' );
  */
 function gourmet_artist_scripts() {
 	wp_enqueue_style( 'gourmet-artist-style', get_stylesheet_uri() );
+	/* Implementa las librerías CSS principales de 'Foundation' al "UnderScores Theme" de WordPress */
+	wp_enqueue_style(
+		'foundation-css',
+		get_template_directory_uri(). '/css/app.css'
+	);
 
+	/* Implementamos jQuery que viene integrado con WordPress */
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'gourmet-artist-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
+	/* Implementa las librerías JS de 'Foundation' al "UnderScores Theme" de WordPress */
+	wp_enqueue_script(
+		'foundation-js',
+		get_template_directory_uri(). '/bower_components/foundation-sites/dist/js/foundation.js',
+		array(),
+		'6.4.0'
+	);
+	/* Implementa las librerías de 'What Input' */
+	wp_enqueue_script(
+		'what-input',
+		get_template_directory_uri(). '/bower_components/what-input/dist/what-input.min.js',
+		array(),
+		'v4.1.6'
+	);
+	/* Implementa las librerías JS principales de 'Foundation' al "UnderScores Theme" de WordPress */
+	wp_enqueue_script(
+		'app-js',
+		get_template_directory_uri(). '/js/app.js'
+ 	);
 	wp_enqueue_script( 'gourmet-artist-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -155,4 +180,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
