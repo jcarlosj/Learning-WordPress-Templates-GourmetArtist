@@ -20,8 +20,8 @@ function gourmet_artist_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'gourmet_artist_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1400,
+		'height'                 => 439,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'gourmet_artist_header_style',
 	) ) );

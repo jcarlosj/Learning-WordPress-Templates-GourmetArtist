@@ -25,6 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gourmet-artist' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<?php the_header_image_tag(); ?>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
