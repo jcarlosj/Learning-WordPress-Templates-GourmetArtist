@@ -15,4 +15,32 @@ header {
             }
         }
     }
+    nav {
+        &.main-navigation{
+            background-color: $primary-color;
+
+            ul {
+                @include breakpoint( medium ) {
+                    display: flex;
+                }
+                li {
+                    float: none;
+
+                    a {
+                        color: $white;
+                        font-weight: bold;
+                        padding: rem-calc( 20 0 ) !important; /* 10px (Arriba/Abajo) 0px (Derecha/Izquierda)
+                                                                 Al agregarle !important se redimensiona el menú
+                                                                 adecuadamente al agrandar o reducir la ventana
+                                                                 del navegador (Firefox no funciona hay que recargar) */
+                        transition: background-color 0.5s ease;
+
+                        &:hover {
+                            background-color:  darken( $primary-color, 10 );
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

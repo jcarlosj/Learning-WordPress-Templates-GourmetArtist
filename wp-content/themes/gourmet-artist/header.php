@@ -55,6 +55,7 @@
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s vertical medium-horizontal expanded text-center">%3$s</ul>'
 				) );
 			?>
 		</nav><!-- #site-navigation -->
