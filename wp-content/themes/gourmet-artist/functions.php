@@ -123,6 +123,11 @@ function gourmet_artist_scripts() {
 		'foundation-css',
 		get_template_directory_uri(). '/css/app.css'
 	);
+	/* Implementa las librerías CSS principales de 'Foundation Icons' al "UnderScores Theme" de WordPress */
+	wp_enqueue_style(
+		'foundation-icons-css',
+		get_template_directory_uri(). '/css/foundation-icons.css'
+	);
 
 	/* Implementamos jQuery que viene integrado con WordPress */
 	wp_enqueue_script( 'jquery' );
