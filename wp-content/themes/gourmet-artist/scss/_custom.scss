@@ -38,6 +38,11 @@ header {
                         &:hover {
                             background-color:  darken( $primary-color, 10 );
                         }
+
+                        i {
+                            font-size: rem-calc( 20 );
+                            padding-right: 10px;
+                        }
                     }
                 }
             }
