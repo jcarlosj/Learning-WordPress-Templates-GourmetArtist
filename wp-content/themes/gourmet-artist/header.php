@@ -62,6 +62,3 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		Prueba de despliegue de Foundation Icons
-		<i class="fi-male-symbol"></i>
-		<i class="fi-female-symbol"></i>
