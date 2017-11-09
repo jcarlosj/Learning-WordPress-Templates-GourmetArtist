@@ -1,5 +1,8 @@
 /* Archivo SCSS */
 
+$page-title: 'Pinyon Script', cursive;
+$page-description: 'Yellowtail', cursive;
+
 header {
     .header-image {
         background-position: center center;
@@ -8,6 +11,23 @@ header {
 
         .site-branding {
             padding-top: rem-calc( 120 ); /* rem-calc(): función de 'Foundation' que converte pixeles a rem */
+
+            h1 {
+              &.site-title {
+                font-family: $page-title;
+              }
+            }
+
+            p {
+              &.site-description {
+                font-family: 'Yellowtail', cursive;
+                font-size: rem-calc( 30 );
+                /* Las siguientes 3 líneas reemplazan text-decoration: underline; y permiten una mejor personalización */
+                border-bottom: 1px solid $white;
+                display: inline-block;
+                line-height: 40px;
+              }
+            }
 
             a,
             p {
