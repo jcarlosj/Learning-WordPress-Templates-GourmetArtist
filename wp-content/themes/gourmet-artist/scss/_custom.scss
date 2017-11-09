@@ -19,6 +19,24 @@ header {
         &.main-navigation{
             background-color: $primary-color;
 
+            /* Agregamos un Mixin de Foundation para crear un 'breakpoint' para cambiar
+             * Los estilos cuando se redimensione la ventana del navegador a un tamaño
+             * específico */
+            @include breakpoint( medium ) {
+                .title-bar {
+                  display: none;
+                }
+            }
+
+            .menu-icon {
+              /* Agregamos un Mixin de Foundation para crear un menú hamburguesa
+               * los parametros son:
+               * Color, Color Hover, Ancho del botón, Alto del Botón, Grosor de las barras, Cantidad de barras
+               */
+              @include hamburger( $white, $white, 30px, 20px, 4px, 3 );
+              box-shadow: none;
+            }
+
             ul {
                 @include breakpoint( medium ) {
                     display: flex;
