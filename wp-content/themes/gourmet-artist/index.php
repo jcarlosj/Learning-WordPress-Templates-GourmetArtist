@@ -17,6 +17,8 @@ get_header(); ?>
 	<div id="primary" class="content-area medium-8 columns">
 		<main id="main" class="site-main">
 
+			<h2>Últimas Recetas</h2>
+
 		<?php
 		if ( have_posts() ) :
 
