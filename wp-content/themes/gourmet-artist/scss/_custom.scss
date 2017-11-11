@@ -87,3 +87,42 @@ header {
         }
     }
 }
+
+/* Page: index.php
+ * Últimas Recetas
+ */
+ #content {
+   margin-top: rem-calc( 30 );
+
+   h2 {
+     &.ultimas-recetas {
+       background-image: url( '../images/separator.png' );
+       background-position: center bottom;
+       background-repeat: no-repeat;
+       margin-bottom: rem-calc( 30 );
+     }
+     &.entry-title {
+       font-size: rem-calc( 20 );
+
+       a {
+         color: $black;
+       }
+     }
+   }
+
+   div {
+     &.entry-content {
+       margin-top: rem-calc( 10 );
+
+       a {
+          display: table;
+
+         &.button {
+           font-weight: bold;
+           margin-top: rem-calc( 15 );
+           text-transform: uppercase;
+         }
+       }
+     }
+   }
+ }
