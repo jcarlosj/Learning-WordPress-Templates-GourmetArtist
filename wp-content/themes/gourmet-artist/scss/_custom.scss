@@ -3,6 +3,23 @@
 $page-title: 'Pinyon Script', cursive;
 $page-description: 'Yellowtail', cursive;
 
+a {
+  &:visited {
+    color: $primary-color;
+  }
+}
+
+.separator::after {
+  background-image: url( '../images/separator.png' );
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  margin: 0 auto;
+  height: rem-calc( 10 );
+  width: rem-calc( 50 );
+}
+
 header {
     .header-image {
         background-position: center center;
@@ -96,10 +113,8 @@ header {
 
    h2 {
      &.ultimas-recetas {
-       background-image: url( '../images/separator.png' );
-       background-position: center bottom;
-       background-repeat: no-repeat;
        margin-bottom: rem-calc( 30 );
+       @extend .separator;  /* Hereda de la clase 'separator' */
      }
      &.entry-title {
        font-size: rem-calc( 20 );
@@ -121,8 +136,20 @@ header {
            font-weight: bold;
            margin-top: rem-calc( 15 );
            text-transform: uppercase;
+
+           &:visited {
+             color: $white;
+           }
          }
        }
      }
    }
  }
+/* --- ASIDE --- */
+aside {
+  h2 {
+    &.widget-title {
+      @extend .separator;
+    }
+  }
+}
