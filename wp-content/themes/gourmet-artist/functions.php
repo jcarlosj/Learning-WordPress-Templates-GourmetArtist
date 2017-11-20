@@ -192,3 +192,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/* Load Widgets @Jce_ */
+require get_template_directory() . '/inc/widgets.php';
