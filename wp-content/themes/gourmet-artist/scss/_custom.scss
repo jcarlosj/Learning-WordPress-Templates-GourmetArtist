@@ -169,7 +169,11 @@ aside {
   }
   h3 {
     &.last-post {
-      font-size: rem-calc( 19 );
+      font-size: rem-calc( 26 );
+      /* Agregamos Mixin de Foundation */
+      @include breakpoint( medium ) {
+        font-size: rem-calc( 19 );
+      }
     }
   }
   .widget_ultimos_post {
