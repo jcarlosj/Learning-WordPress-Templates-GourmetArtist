@@ -1,17 +1,17 @@
 <?php
 /**
- * Adds Foo_Widget widget.
+ * Adds UltimosPost widget.
  */
-class Foo_Widget extends WP_Widget {
+class UltimosPost extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'foo_widget', // Base ID
-			esc_html__( 'Widget Title', 'text_domain' ), // Name
-			array( 'description' => esc_html__( 'A Foo Widget', 'text_domain' ), ) // Args
+			'ultimos_post', // Base ID
+			esc_html__( 'Widget - Últimos Post', 'text_domain' ), // Name
+			array( 'description' => esc_html__( 'Nuestra los últimos post del Blog', 'text_domain' ), ) // Args
 		);
 	}
 
@@ -28,7 +28,27 @@ class Foo_Widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo esc_html__( 'Hello, World!', 'text_domain' );
+
+    /* Personalizamos la consulta */
+    $query_entries = array(
+      'post_type'      => 'post',   # Elegimos el tipo de entradas que deseamos publicar
+      'order'          => 'DESC',   # Orden de la publicación (Descendente)
+      'cat'            => 4,        # Elegimos la categoría de las entradas que se van a publicar
+      'order_by'       => 'date',   # Ordenado por: Fecha
+      'posts_per_page' => 5         # Cantidad de publicaciones por página
+    );
+
+    /* Realiza la consulta WP_Query */
+    $blog = new WP_Query( $query_entries );
+    # Imprime las entradas requeridas
+    while( $blog -> have_posts() ):
+      $blog -> the_post();
+
+      echo '<h4>' .get_the_title(). '</h4>';
+
+
+    endwhile; wp_reset_postdata();
+
 		echo $args['after_widget'];
 	}
 
@@ -66,13 +86,13 @@ class Foo_Widget extends WP_Widget {
 		return $instance;
 	}
 
-} // class Foo_Widget
+} // class UltimosPost
 
 
-// register Foo_Widget widget
-function register_foo_widget() {
-    register_widget( 'Foo_Widget' );
+// register UltimosPost widget
+function register_ultimos_post() {
+    register_widget( 'UltimosPost' );
 }
-add_action( 'widgets_init', 'register_foo_widget' );
+add_action( 'widgets_init', 'register_ultimos_post' );
 
 ?>
