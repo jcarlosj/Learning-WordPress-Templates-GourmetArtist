@@ -31,7 +31,15 @@ get_header(); ?>
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+
+			# Consulta filtrarda para solo publicar las entradas con la categoría (Recetas)
+			$query = new WP_Query(
+				array(
+					'cat' => 3
+				)
+			);
+
+			while ( $query -> have_posts() ) : $query -> the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -40,7 +48,7 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile; wp_reset_postdata();
 
 			the_posts_navigation();
 
