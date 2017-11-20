@@ -40,15 +40,30 @@ class UltimosPost extends WP_Widget {
 
     /* Realiza la consulta WP_Query */
     $blog = new WP_Query( $query_entries );
+?>
+  <ul class="no-bullet">
+<?php
     # Imprime las entradas requeridas
     while( $blog -> have_posts() ):
       $blog -> the_post();
 
-      echo '<h4>' .get_the_title(). '</h4>';
-
+?>
+    <li class="row">
+      <div class="small-6 medium-4 columns">
+        <?php the_post_thumbnail( 'entry-image' ); ?>
+      </div>
+      <div class="small-6 medium-8 columns">
+        <h3 class="last-post">
+          <a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+        </h3>
+      </div>
+    </li>
+<?php
 
     endwhile; wp_reset_postdata();
-
+?>
+  </ul><!-- .no-bullet -->
+<?php
 		echo $args['after_widget'];
 	}
 

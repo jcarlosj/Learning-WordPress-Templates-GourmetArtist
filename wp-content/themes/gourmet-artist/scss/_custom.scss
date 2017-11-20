@@ -167,4 +167,14 @@ aside {
       @extend .separator;
     }
   }
+  h3 {
+    &.last-post {
+      font-size: rem-calc( 19 );
+    }
+  }
+  .widget_ultimos_post {
+    li {
+      margin-bottom: rem-calc( 14 );
+    }
+  }
 }
