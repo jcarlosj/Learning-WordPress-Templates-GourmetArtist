@@ -9,6 +9,10 @@ a {
   }
 }
 
+.byline {
+  display: inline;
+}
+
 .separator::after {
   background-image: url( '../images/separator.png' );
   background-position: center center;
@@ -110,6 +114,17 @@ header {
  */
  #content {
    margin-top: rem-calc( 30 );
+
+  div {
+    &.entry-meta {
+      i {
+        font-size: rem-calc( 24 );
+      }
+      a {
+        color: $black;
+      }
+    }
+  }
 
    h2 {
      &.ultimas-recetas {
