@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'row' ); ?>>
 
 	<div class="medium-6 columns">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail( 'entry-image' ); ?>
 	</div>
 
 	<div class="medium-6 columns">

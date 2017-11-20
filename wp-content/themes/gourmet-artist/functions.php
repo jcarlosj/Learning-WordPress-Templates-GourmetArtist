@@ -16,6 +16,13 @@ if ( ! function_exists( 'gourmet_artist_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function gourmet_artist_setup() {
+		/* Personalizamos nu nuevo tamaño de imagen */
+		add_image_size(
+			'entry-image', 	# Nombre del tamaño de imagen que hemos registrado
+			619, 						# Alto de la imagen en pixeles
+			462, 						# Ancho de la imagen en pixeles
+			true 						# TRUE -> Si deseamos que haga un cropping de la imagen
+		);
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.

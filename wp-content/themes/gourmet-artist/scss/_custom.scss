@@ -132,7 +132,7 @@ header {
        @extend .separator;  /* Hereda de la clase 'separator' */
      }
      &.entry-title {
-       font-size: rem-calc( 20 );
+       font-size: rem-calc( 24 );
 
        a {
          color: $black;
@@ -142,14 +142,14 @@ header {
 
    div {
      &.entry-content {
-       margin-top: rem-calc( 10 );
+       margin-top: rem-calc( 18 );
 
        a {
           display: table;
 
          &.button {
            font-weight: bold;
-           margin-top: rem-calc( 15 );
+           margin-top: rem-calc( 20 );
            text-transform: uppercase;
 
            &:visited {
