@@ -184,13 +184,51 @@ aside {
 }
 /* --- FOOTER --- */
 footer {
-  background-color: $dark-gray;
-  padding: rem-calc( 20 0 );
+  &.site-footer {
+    background-color: $dark-gray;
+    padding: rem-calc( 20 0 );
 
-  ul {
-    li {
-      a {
-        color: $white;
+    ul {
+      margin-top: rem-calc( 20 );
+
+      li {
+        a {
+          color: $white;
+        }
+      }
+
+      /* Menú de redes sociales */
+      &#social-menu {
+        margin-top: 0;
+
+        li {
+          a {
+            font-family: foundation-icons;
+            color: $white;
+            font-size: 0;  /* Disminuye el tamaño de los enlaces y los iconos*/
+
+            &:before {
+              /* Afectará a lo que esté antes del enlace */
+              font-size: rem-calc( 50 );  /* Aumenta el tamaño de los íconos */
+            }
+
+            &[href='http://www.facebook.com']:before {
+              /* Colocará Icono Facebook de Foundation Icons antes del enlace */
+              content: '\f1c4';
+            }
+
+            &[href='http://www.twitter.com']:before {
+              /* Colocará Icono Twitter de Foundation Icons antes del enlace */
+              content: '\f1e4';
+            }
+
+            &[href='http://www.youtube.com']:before {
+              /* Colocará Icono YouTube de Foundation Icons antes del enlace */
+              content: '\f1ea';
+            }
+
+          }
+        }
       }
     }
   }

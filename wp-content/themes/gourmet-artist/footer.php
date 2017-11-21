@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info row">
-			<div class="medium-4 columns">
+			<div class="medium-5 columns">
 				<?php
 					wp_nav_menu(
 						array(
@@ -26,13 +26,13 @@
 					);
 				?>
 			</div>
-			<div class="medium-4 columns">
+			<div class="medium-3 columns">
 				<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'social-menu',
 							'menu_id'        => 'social-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s vertical medium-horizontal text-center">%3$s</ul>'
+							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>'
 						)
 					);
 				?>
