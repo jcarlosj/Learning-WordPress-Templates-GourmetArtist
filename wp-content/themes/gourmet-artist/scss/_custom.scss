@@ -182,3 +182,16 @@ aside {
     }
   }
 }
+/* --- FOOTER --- */
+footer {
+  background-color: $dark-gray;
+  padding: rem-calc( 20 0 );
+
+  ul {
+    li {
+      a {
+        color: $white;
+      }
+    }
+  }
+}
