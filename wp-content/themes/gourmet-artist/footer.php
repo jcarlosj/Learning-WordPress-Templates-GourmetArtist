@@ -26,6 +26,17 @@
 					);
 				?>
 			</div>
+			<div class="medium-4 columns">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'social-menu',
+							'menu_id'        => 'social-menu',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s vertical medium-horizontal text-center">%3$s</ul>'
+						)
+					);
+				?>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
