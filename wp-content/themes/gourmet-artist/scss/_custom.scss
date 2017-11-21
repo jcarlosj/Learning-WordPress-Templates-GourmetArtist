@@ -152,6 +152,9 @@ header {
   }
 
   h1 {
+    &.page-title {
+      @extend .entry-title;
+    }
     &.entry-title {
       @extend .separator;
       @include breakpoint( medium ) {
