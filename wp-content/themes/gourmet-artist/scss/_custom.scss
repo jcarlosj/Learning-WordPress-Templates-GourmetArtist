@@ -40,6 +40,10 @@ header {
             }
 
             p {
+              &.site-title {
+                font-family: $page-title;
+                font-size: rem-calc( 80 );
+              }
               &.site-description {
                 font-family: 'Yellowtail', cursive;
                 font-size: rem-calc( 30 );
@@ -86,6 +90,20 @@ header {
                 li {
                     float: none;
 
+                    &.current-menu-item {
+                      background-color: $white;
+
+                      a {
+                        color: $primary-color;
+                        transition: all 0.5s ease;
+
+                        &:hover {
+                          background-color: lighten( $primary-color, 10 );
+                          color: white;
+                        }
+                      }
+                    }
+
                     a {
                         color: $white;
                         font-weight: bold;
@@ -112,15 +130,15 @@ header {
 
 .header-no-image {
   @extend .header-image;    /* Heredamos los estilos de la clase 'header-image' */
-  background-color: lighten( $primary-color, 10 ); 
+  background-color: lighten( $primary-color, 10 );
 }
 
 
 /* Page: index.php
  * Últimas Recetas
  */
- #content {
-   margin-top: rem-calc( 30 );
+#content {
+  margin-top: rem-calc( 30 );
 
   div {
     &.entry-meta {
@@ -129,6 +147,15 @@ header {
       }
       a {
         color: $black;
+      }
+    }
+  }
+
+  h1 {
+    &.entry-title {
+      @extend .separator;
+      @include breakpoint( medium ) {
+        font-size: rem-calc( 40 );
       }
     }
   }
