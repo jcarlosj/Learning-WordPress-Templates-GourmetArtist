@@ -270,3 +270,22 @@ footer {
     }
   }
 }
+/* Contact Form 7
+ * Formulario: Contacto
+ */
+
+ #btn-enviar {
+   /* Aplicamos un Mixin de Foundation para darle estilo al botón de enviar del formulario */
+   @include button-style(
+     $primary-color,                 /* Color del Botón */
+     darken( $primary-color, 10 ),   /* Color del Hover del Botón */
+     $white                          /* Color del texto del Botón */
+   );
+   border-radius: 0;
+   border: none;
+   box-shadow: none;
+   font-size: rem-calc( 16 );
+   font-weight: bold;
+   padding: $button-padding;
+   text-transform: uppercase;
+ }
