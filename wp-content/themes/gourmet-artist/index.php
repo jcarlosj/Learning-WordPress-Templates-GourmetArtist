@@ -14,6 +14,10 @@
 
 get_header(); ?>
 
+	<?php /* Orbit Foundation (Slider) */
+		get_template_part( 'template-parts/slider' );
+	?>
+
 	<div id="primary" class="content-area medium-8 columns">
 		<main id="main" class="site-main">
 
