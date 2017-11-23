@@ -24,7 +24,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	</div>
 
 	<!-- "LightBox/Reveal" del Newsletter -->
-	<div id="newsletter" class="small reveal" data-reveal>
+	<div id="newsletter" class="small reveal" data-reveal data-animation-in="spin-in" data-animation-out="spin-out">
 		<form class="" action="#">
 			<h2 class="text-center">Suscribete al Newsletter</h2>
 			<div class="row columns">
