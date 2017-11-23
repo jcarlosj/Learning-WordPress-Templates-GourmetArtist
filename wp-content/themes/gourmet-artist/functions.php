@@ -23,6 +23,12 @@ if ( ! function_exists( 'gourmet_artist_setup' ) ) :
 			462, 						# Ancho de la imagen en pixeles
 			true 						# TRUE -> Si deseamos que haga un cropping de la imagen
 		);
+		add_image_size(
+			'slider-image', # Nombre del tamaño de imagen que hemos registrado
+			1200, 				  # Alto de la imagen en pixeles
+			370, 						# Ancho de la imagen en pixeles
+			true 						# TRUE -> Si deseamos que haga un cropping de la imagen
+		);
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
