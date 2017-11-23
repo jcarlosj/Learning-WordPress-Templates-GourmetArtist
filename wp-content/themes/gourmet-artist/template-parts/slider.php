@@ -24,7 +24,7 @@
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail( 'slider-image' ); ?>
           <div class="">
-            <h3 class="orbit-caption"><?php the_title(); ?></h3>
+            <h3 class="orbit-caption text-center"><?php the_title(); ?></h3>
           </div>
         </a>
       </li>
