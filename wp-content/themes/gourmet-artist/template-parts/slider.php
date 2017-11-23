@@ -8,7 +8,8 @@
     <?php
       $i = 0;
       $args = array(
-        'posts_per_page' => 5       # Cantidad de Post por página
+        'posts_per_page' => 5,        # Cantidad de Post por página
+        'tag'            => 'slider'  # Etiqueta de la entrada
       );
 
       $slider = new WP_Query( $args );
