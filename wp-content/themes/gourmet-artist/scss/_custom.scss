@@ -273,7 +273,7 @@ footer {
 /* Contact Form 7
  * Formulario: Contacto
  */
-
+ #btn-send-newsletter,
  #btn-enviar {
    /* Aplicamos un Mixin de Foundation para darle estilo al botón de enviar del formulario */
    @include button-style(

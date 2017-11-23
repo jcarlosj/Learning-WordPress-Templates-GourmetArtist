@@ -24,8 +24,23 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	</div>
 
 	<!-- "LightBox/Reveal" del Newsletter -->
-	<div id="newsletter" class="reveal" data-reveal>
-		<h1>Hola desde Reveal!</h1>
+	<div id="newsletter" class="small reveal" data-reveal>
+		<form class="" action="#">
+			<h2 class="text-center">Suscribete al Newsletter</h2>
+			<div class="row columns">
+				<label for="nombre">Nombre
+					<input type="text" name="nombre" placeholder="Tú nombre" />
+				</label>
+			</div>
+			<div class="row columns">
+				<label for="email">Correo electrónico
+					<input type="text" name="email" placeholder="Tú email" />
+				</label>
+			</div>
+			<div class="row columns">
+				<button id="btn-send-newsletter" type="submit" class="button">Enviar</button>
+			</div>
+		</form>
 	</div>
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
