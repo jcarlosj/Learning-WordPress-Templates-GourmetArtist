@@ -13,10 +13,20 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area medium-4 columns" role="complementary">
+
+	<!-- Imagen del Newsletter -->
 	<div class="row">
 		<div class="medium-12 columns">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter.jpg" alt="Suscribete al Newsletter">
+			<a data-open="newsletter">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/newsletter.jpg" alt="Suscribete al Newsletter">
+			</a>
 		</div>
 	</div>
+
+	<!-- "LightBox/Reveal" del Newsletter -->
+	<div id="newsletter" class="reveal" data-reveal>
+		<h1>Hola desde Reveal!</h1>
+	</div>
+
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
