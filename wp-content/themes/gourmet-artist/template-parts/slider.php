@@ -1,9 +1,9 @@
-<div class="orbit" data-orbit data-use-m-u-i="true">
+<div class="orbit">
   <ul class="orbit-container">
 
     <!--Botones laterales del Slider -->
-    <button class="orbit-previous">&#9664;</button>
-    <button class="orbit-next">&#9654;</button>
+    <button class="orbit-previous">&#9664;&#xFE0E;</button>
+    <button class="orbit-next">&#9654;&#xFE0E;</button>
 
     <?php
       $i = 0;
